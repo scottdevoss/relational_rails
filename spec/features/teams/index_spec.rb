@@ -26,5 +26,4 @@ RSpec.describe "Team Index", type: :feature do
       end
     end
   end
-
 end
