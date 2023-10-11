@@ -1,14 +1,14 @@
 require "rails_helper"
 
 RSpec.describe "Team Index", type: :feature do
-  # User Story 1, Parent Index 
-
-  # For each team table
-  # As a visitor
-  # When I visit '/teams'
-  # Then I see the name of each team record in the system
-
+  
   describe "As a visitor" do
+    # User Story 1, Parent Index 
+  
+    # For each team table
+    # As a visitor
+    # When I visit '/teams'
+    # Then I see the name of each team record in the system
     describe "When I visit '/teams" do
       it "I see the name of each team record in the system" do
         #arrange
@@ -19,7 +19,7 @@ RSpec.describe "Team Index", type: :feature do
         visit "/teams"
 
         #assert
-        #save_and_open_page
+        # save_and_open_page
         expect(page).to have_content("All Teams")
         expect(page).to have_content(team1.name)
         expect(page).to have_content(team2.name)
