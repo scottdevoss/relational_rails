@@ -41,7 +41,7 @@ RSpec.describe "Team Index", type: :feature do
         visit "/teams"
 
         #assert
-        save_and_open_page
+        # save_and_open_page
         expect(page).to have_content("All Teams")
         expect(page).to have_content("#{team1.name}")
         expect(page).to have_content("Created at: #{team1.created_at}")
