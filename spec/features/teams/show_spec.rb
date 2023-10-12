@@ -78,6 +78,19 @@ RSpec.describe "Team Show Page", type: :feature do
 
         expect(current_path).to eq("/teams")
       end
+
+      it "links to that Teams Players page" do
+        #arrange
+
+        #act
+        visit "/teams/#{@team1.id}"
+
+        #assert
+        # save_and_open_page
+        click_on "#{@team1.name}'s Players Index"
+
+        expect(current_path).to eq("/teams/#{@team1.id}/players")
+      end
     end
   end
 end
