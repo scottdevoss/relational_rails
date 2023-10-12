@@ -1,7 +1,8 @@
 <h1>All Players</h1>
 <% @players.each do |player| %>
-  <p><%= player.name %></p>
-  <p><%= player.position %></p>
-  <p><%= player.age %></p>
-  <p><%= player.retired %></p>
+  <p>Name: <%= player.name %></p>
+  <p>Team: <%= player.team.name %></p>
+  <p>Position: <%= player.position %></p>
+  <p>Age: <%= player.age %></p>
+  <p>Retired: <%= player.retired %></p>
 <% end  %>
