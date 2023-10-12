@@ -49,6 +49,19 @@ RSpec.describe "Player Index", type: :feature do
 
         expect(current_path).to eq("/players")
       end
+
+      it "links to the Teams Index page" do
+        #arrange
+
+        #act
+        visit "/players"
+
+        #assert
+        # save_and_open_page
+        click_on "Teams Index"
+
+        expect(current_path).to eq("/teams")
+      end
     end
   end
 end
