@@ -1,0 +1,11 @@
+<a href="/players">Player Index</a>
+<a href="/teams">Teams Index</a>
+
+<h1>Teams Players</h1>
+<h3>Team: <%= @team.name %></h3>
+<% @players.each do |player| %>
+  <p>Player: <%= player.name %></p>
+  <p>Position: <%= player.position %></p>
+  <p>Age: <%= player.age %></p>
+  <p>Retired: <%= player.retired %></p>
+<% end  %>
