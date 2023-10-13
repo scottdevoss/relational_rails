@@ -17,8 +17,8 @@ RSpec.describe "the Team Creation" do
         visit "/teams/new"
 
         fill_in("Name", with: "Real Madrid")
-        fill_in("Year Founded", with: 1902)
-        fill_in("Former Champion", with: true)
+        fill_in("Year founded", with: 1902)
+        fill_in("Former champion", with: true)
         click_button("Create Team")
 
         expect(current_path).to eq("/teams")
