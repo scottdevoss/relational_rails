@@ -23,5 +23,13 @@ RSpec.describe Player, type: :model do
         expect(retired_players).to eq([@player1])
       end
     end
+
+    describe "order_by_name" do
+      it "displays the records in alphabetical order by name" do
+        ordered_list = @team1.players.order_by_name
+
+        expect(ordered_list).to eq([@player1, @player3])
+      end
+    end
   end
 end
