@@ -39,9 +39,6 @@ RSpec.describe "Team Index", type: :feature do
       # And next to each of the records I see when it was created
       it "can display the name of each team in order of most recently created" do
         #arrange
-        # team1 = Team.create(name: "Manchester United", year_founded: 1902, former_champion: true)
-        # team2 = Team.create(name: "Liverpool", year_founded: 1892, former_champion: true)
-        # team3 = Team.create(name: "Arsenal", year_founded: 1886, former_champion: true)
         
         #act
         visit "/teams"
