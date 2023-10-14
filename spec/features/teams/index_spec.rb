@@ -79,6 +79,18 @@ RSpec.describe "Team Index", type: :feature do
 
         expect(current_path).to eq("/teams")
       end
+
+      it "has links to update each team" do
+        visit "/teams"
+
+        expect(page).to have_content("Update #{@team1.name}")
+        expect(page).to have_content("Update #{@team2.name}")
+        expect(page).to have_content("Update #{@team3.name}")
+
+        click_on "Update #{@team1.name}"
+
+        expect(current_path).to eq("/teams/#{@team1.id}/edit")
+      end
     end
   end
 end
