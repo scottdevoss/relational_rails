@@ -763,7 +763,56 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/2mod/projects/relational_rails/spec/model/team_spec.rb": {
+      "/Users/scottdevoss/turing/2mod/projects/relational_rails/spec/models/player_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/2mod/projects/relational_rails/app/models/player.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/2mod/projects/relational_rails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/2mod/projects/relational_rails/spec/models/team_spec.rb": {
         "lines": [
           null,
           null,
@@ -775,20 +824,6 @@
         ]
       },
       "/Users/scottdevoss/turing/2mod/projects/relational_rails/app/models/team.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/2mod/projects/relational_rails/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/2mod/projects/relational_rails/app/models/player.rb": {
         "lines": [
           1,
           1,
@@ -892,6 +927,6 @@
         ]
       }
     },
-    "timestamp": 1697322719
+    "timestamp": 1697324147
   }
 }
