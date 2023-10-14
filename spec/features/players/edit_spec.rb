@@ -30,9 +30,11 @@ RSpec.describe "the Player Edit" do
         fill_in "Position", with: "Right Midfielder"
         fill_in "Age", with: 48
         fill_in "Retired", with: true
+
         click_button "Update Player"
 
-        expect
+        expect(current_path).to eq("/players/#{player1.id}")
+        expect(page).to have_content("Right Midfielder")
       end
     end
   end

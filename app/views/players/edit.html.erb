@@ -1,0 +1,11 @@
+<%= form_with url: "/players/#{@player.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, value: "#{@player.name}" %><br>
+  <%= form.label :position %>
+  <%= form.text_field :position, value: "#{@player.position}" %><br>
+  <%= form.label :age %>
+  <%= form.text_field :age, value: "#{@player.age}" %><br>
+  <%= form.label :retired %>
+  <%= form.text_field :retired, value: "#{@player.retired}" %><br>
+  <%= form.submit "Update Player" %>
+<% end %>
