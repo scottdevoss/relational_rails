@@ -39,9 +39,6 @@ RSpec.describe "Team Index", type: :feature do
       # And next to each of the records I see when it was created
       it "can display the name of each team in order of most recently created" do
         #arrange
-        # team1 = Team.create(name: "Manchester United", year_founded: 1902, former_champion: true)
-        # team2 = Team.create(name: "Liverpool", year_founded: 1892, former_champion: true)
-        # team3 = Team.create(name: "Arsenal", year_founded: 1886, former_champion: true)
         
         #act
         visit "/teams"
@@ -81,6 +78,18 @@ RSpec.describe "Team Index", type: :feature do
         click_on "Teams Index"
 
         expect(current_path).to eq("/teams")
+      end
+
+      it "has links to update each team" do
+        visit "/teams"
+
+        expect(page).to have_content("Update #{@team1.name}")
+        expect(page).to have_content("Update #{@team2.name}")
+        expect(page).to have_content("Update #{@team3.name}")
+
+        click_on "Update #{@team1.name}"
+
+        expect(current_path).to eq("/teams/#{@team1.id}/edit")
       end
     end
   end

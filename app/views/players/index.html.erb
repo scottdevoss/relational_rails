@@ -8,4 +8,5 @@
   <p>Position: <%= player.position %></p>
   <p>Age: <%= player.age %></p>
   <p>Retired: <%= player.retired %></p>
+  <%= button_to "Update #{player.name}", "/players/#{player.id}/edit", method: :get %><br/>
 <% end  %>

@@ -1,0 +1,12 @@
+<%= form_with url: "/teams/#{@team.id}/players", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :position %>
+  <%= form.text_field :position %><br>
+  <%= form.label :age %>
+  <%= form.text_field :age %><br>
+  <%= form.label :retired %>
+  <%= form.text_field :retired %><br>
+
+  <%= form.submit "Create Player" %>
+<% end %>

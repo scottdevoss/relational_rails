@@ -1,8 +1,10 @@
 <a href="/players">Player Index</a>
 <a href="/teams">Teams Index</a>
+<a href="/teams/new">New Team</a>
 
 <h1>All Teams</h1>
 <% @teams.each do |team| %>
   <p><%= team.name %></p>
   <p>Created at: <%= team.created_at %></p>
+  <%= button_to "Update #{team.name}", "/teams/#{team.id}/edit", method: :get %><br/>
 <% end  %>
