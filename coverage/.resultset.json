@@ -232,6 +232,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null
         ]
       },
@@ -376,6 +378,47 @@
           null,
           1,
           null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/2mod/projects/relational_rails/spec/features/team_players/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null,
@@ -739,13 +782,28 @@
         "lines": [
           1,
           1,
-          4,
-          4,
+          6,
+          6,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1697250225
+    "timestamp": 1697302642
   }
 }
