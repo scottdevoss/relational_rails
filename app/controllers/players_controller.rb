@@ -6,4 +6,8 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
   end
+
+  def edit
+    
+  end
 end
