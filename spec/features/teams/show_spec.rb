@@ -91,6 +91,15 @@ RSpec.describe "Team Show Page", type: :feature do
 
         expect(current_path).to eq("/teams/#{@team1.id}/players")
       end
+
+      it "links to delete the Team and redirect to the Team Index page" do
+        visit "/teams/#{@team1.id}"
+
+        click_on "Delete #{@team1.name}"
+
+        expect(current_path).to eq("/teams")
+        expect(page).to_not have_content("#{@team1.name}")
+      end
     end
   end
 end
