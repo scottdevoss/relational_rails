@@ -66,6 +66,28 @@ RSpec.describe "Team Players Index", type: :feature do
         expect(current_path).to eq("/teams")
       end
 
+      it "links to display players alphabetically by name" do
+        visit "/teams/#{@team1.id}/players"
+
+        click_on "Sort #{@team1.name}'s Players Alphabetically"
+
+        expect(current_path).to eq("/teams/#{@team1.id}/players")
+
+        expect(@player1.name).to have_content(@player1.name)
+      end
+
+      it "has links to update Manchester United's players" do
+        visit "/teams/#{@team1.id}/players"
+
+        expect(page).to have_content("Update #{@player1.name}")
+        expect(page).to have_content("Update #{@player3.name}")
+
+        click_on "Update #{@player1.name}"
+
+        expect(current_path).to eq("/players/#{@player1.id}/edit")
+      end
+
+
       xit "links to display players older than the number input by the user" do
         visit "/teams/#{@player1.id}/players"
 
