@@ -2,6 +2,10 @@ class TeamPlayersController < ApplicationController
   def index
     @team = Team.find(params[:team_id])
     @players = @team.players
+    
+    if params[:sort] == "alpha"
+      @players = @team.players.order_by_name
+    end
   end
 
   def new
