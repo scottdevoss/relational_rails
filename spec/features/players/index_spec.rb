@@ -62,6 +62,19 @@ RSpec.describe "Player Index", type: :feature do
 
         expect(current_path).to eq("/teams")
       end
+
+      it "has links to delete each Player" do
+        visit "/players"
+
+        expect(page).to have_content("Delete #{@player1.name}")
+        expect(page).to have_content("Delete #{@player2.name}")
+
+        click_on "Delete #{@player2.name}"
+
+        expect(current_path).to eq("/players")
+        expect(page).to have_content("#{@player1.name}")
+        expect(page).to_not have_content("#{@player2.name}")
+      end
     end
   end
 end

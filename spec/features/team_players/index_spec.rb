@@ -65,6 +65,19 @@ RSpec.describe "Team Players Index", type: :feature do
 
         expect(current_path).to eq("/teams")
       end
+
+      xit "links to display players older than the number input by the user" do
+        visit "/teams/#{@player1.id}/players"
+
+        fill_in "age", with: 40
+
+        click_on "Only return Players older than"
+
+        expect(current_path).to eq("/teams/#{@player1.id}/players")
+
+        expect(page).to have_content(@player1.name)
+        expect(page).to_not have_content (@player2.name)
+      end
     end
   end
 end
