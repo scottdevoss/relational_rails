@@ -93,7 +93,7 @@ RSpec.describe "Team Players Index", type: :feature do
 
         fill_in "age", with: 40
 
-        click_on "Only return Players older than"
+        click_on "Submit"
 
         expect(current_path).to eq("/teams/#{@player1.id}/players")
 

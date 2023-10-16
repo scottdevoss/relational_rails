@@ -7,6 +7,12 @@
 
 <%= link_to "Sort #{@team.name}'s Players Alphabetically", "/teams/#{@team.id}/players?sort=alpha" %>
 
+<%= form_with url: "/teams/#{@team.id}/players?age=#{@age}", method: :get, data: { turbo: false } do |form| %>
+  <%= "Only return Players older than"%>
+  <%= form.number_field :age %>
+  <%= form.submit "Submit" %>
+<% end  %>
+
 <% @players.each do |player| %>
   <p>Player: <%= player.name %></p>
   <p>Position: <%= player.position %></p>
