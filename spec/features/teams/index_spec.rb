@@ -91,6 +91,19 @@ RSpec.describe "Team Index", type: :feature do
 
         expect(current_path).to eq("/teams/#{@team1.id}/edit")
       end
+
+      it "has links to delete each Team" do
+        visit "/teams"
+        
+        expect(page).to have_content("Delete #{@team1.name}")
+        expect(page).to have_content("Delete #{@team2.name}")
+        expect(page).to have_content("Delete #{@team3.name}")
+
+        click_on "Delete #{@team3.name}"
+
+        expect(current_path).to eq("/teams")
+        expect(page).to_not have_content("#{@team3.name}")
+      end
     end
   end
 end

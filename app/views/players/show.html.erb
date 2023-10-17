@@ -7,3 +7,5 @@
 <p>Position: <%= @player.position %></p>
 <p>Age: <%= @player.age %></p>
 <p>Retired: <%= @player.retired %></p>
+
+<%= button_to "Delete #{@player.name}", "/players/#{@player.id}", method: :delete %>

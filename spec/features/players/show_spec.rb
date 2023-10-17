@@ -60,7 +60,7 @@ RSpec.describe "Player Show Page", type: :feature do
         expect(current_path).to eq("/teams")
       end
 
-      it "has links to update eash Show" do
+      it "has links to update each Player" do
         visit "/players"
 
         expect(page).to have_content("Update #{@player1.name}")
@@ -69,6 +69,15 @@ RSpec.describe "Player Show Page", type: :feature do
         click_on "Update #{@player1.name}"
 
         expect(current_path).to eq("/players/#{@player1.id}/edit")
+      end
+
+      it "links to delete the Player and redirect to the Players Index page" do
+        visit "/players/#{@player1.id}"
+
+        click_on "Delete #{@player1.name}"
+
+        expect(current_path).to eq("/players")
+        expect(page).to_not have_content("#{@player1.name}")
       end
     end
   end

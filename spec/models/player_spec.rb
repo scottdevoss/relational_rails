@@ -31,5 +31,13 @@ RSpec.describe Player, type: :model do
         expect(ordered_list).to eq([@player1, @player3])
       end
     end
+
+    describe "display_number_of_players" do
+      it "displays the Players that are older than the input age" do
+        input_age = @team1.players.display_age_greater_than(40)
+
+        expect(input_age).to eq([@player1])
+      end
+    end
   end
 end

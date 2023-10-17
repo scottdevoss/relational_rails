@@ -8,4 +8,8 @@ class Player < ApplicationRecord
   def self.order_by_name
     order(:name)
   end
+
+  def self.display_age_greater_than(number)
+    where("age > #{number}")
+  end
 end

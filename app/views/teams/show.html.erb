@@ -3,7 +3,11 @@
 <a href="/teams/<%= @team.id %>/players"><%= @team.name %>'s Players Index</a>
 <a href="/teams/<%= @team.id %>/edit">Update <%= @team.name %></a>
 
+
+
 <h1>Team Name: <%= @team.name %></h1>
 <p>Year Founded: <%= @team.year_founded %></p>
 <p>Former Champion: <%= @team.former_champion %></p>
 <p>Associated Players: <%= @team.players.count %></p>
+
+<%= button_to "Delete #{@team.name}", "/teams/#{@team.id}", method: :delete %>
